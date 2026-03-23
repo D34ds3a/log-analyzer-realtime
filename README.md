@@ -91,7 +91,6 @@ Screenshots saved as alerts.png, Realtime_log_analyzer_input_demo.png, Realtime_
 
 # Future Improvements
 
-- Regex based detection engine
 - Detection thresholds (repeat offender alerts)
 - JSON/CSV export for SIEM integration
 - Integration with real server logs
