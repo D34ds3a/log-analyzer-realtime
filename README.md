@@ -1,171 +1,107 @@
-\# Real Time Log Analyzer (cybersecurity project)
+# Real Time Log Analyzer (cybersecurity project)
+
+## Overview
+
+This project was written in Python and is a real time log monitoring tool that detects common recon activity, and web based attacks from log files. It simulates a lightweight intrusion detection system (IDS) for Apache/Nginx style web server logs.
 
 
+# Detection capabilities
 
-\## Overview
-
-
-
-This project was written in Python and is a real time log monitoring tool that detects common web based attacks from log files. It simulates a lightweight intrusion detection system (IDS) for web server logs.
-
-
-
+Cross-Site Scripting (XSS)
+Directory Traversal
+SQL injection
+Web Shell Activity
+Command Injection
 
 
-\# Detection capabilities
+# Features
+
+Real time log monitoring
+Timestamped alerts
+Apache/Nginx style log support
+Writes alerts to alerts.log
+Alert counter + summary
+Lightweight and easy to run
+Color Terminal output
+Regex based detection
+Severity Classification (HIGH / MEDIUM / LOW)
 
 
-
-* Cross-Site Scripting (XSS)
-* Directory Traversal
-* SQL injection
-* Web Shell Activity
-* Command Injection
-
-
+# Technologies Used
+Python
+String based threat detection
+Datetime module
+File streaming (real time monitoring)
+Regular Expressions ('re')
 
 
+# How to Run
 
-\# Features
-
-
-
-* Real time log monitoring
-* Timestamped alerts
-* Apache/Nginx style log support
-* Writes alerts to alerts.log
-* Alert counter + summary
-* Lightweight and easy to run
-
-
-
-
-
-\# Technologies Used
-
-* Python
-* String based threat detection
-* Datetime module
-* File streaming (real time monitoring)
-
-
-
-
-
-\# How to Run
-
-
-
-\## Clone the repository
-
+## Clone the repository
 git clone https://github.com/D34ds3a/log-analyzer-reailtime.git cd log-analyzer-realtime
 
-
-
-\## Run the Analyzer
-
-
+## Run the Analyzer
 
 '''bash
-
-py realtime\_log\_analyzer.py
-
+py realtime_log_analyzer.py
 
 
-
-
-\## Simulate Log Activity
-
-
+## Simulate Log Activity
 
 While the program is running
 
+Open sample_logs.txt
+Add a new line at the bottom, for example in descending severity order LOW, MEDIUM, HIGH :
+192.168.1.30 - - [22/Mar/2026:07:00:45 +0000] "GET /robots.txt HTTP/1.1" 200 120
+192.168.1.30 - - [22/Mar/2026:06:10:00 +0000] "GET /search?q=<script>alert(1)</script> HTTP/1.1" 200 512
+10.0.0.5 - - [22/Mar/2026:06:10:05 +0000] "GET /login?user=admin' OR '1'='1 HTTP/1.1" 401 210
+
+3. save file
 
 
-1. Open sample\_logs.txt
-2. Add a new line at the bottom, for example:
-
-192.168.1.50 - - \[22/Mar/2026:07:00:00 +0000] "GET / login?user=admin' OR '1'='1 HTTP/1.1" 401 210
-
-3\. save file
-
-
-
-
-
-\# Observe Alerts
-
-
+# Observe Alerts
 
 The program will instantly detect malicious patterns and display alerts like:
-
-\[2026-03-22 )7:00:00] \[ALERT] SQL Injection detected!
-
-
+[2026-03-22 )7:00:00] [ALERT] SQL Injection detected!
 
 alerts are also saved to:
-
 alerts.log
 
 
-
-
-
-\# Stop the Program
-
-
+# Stop the Program
 
 Press:
 
-
-
 Ctrl + C
-
-
 
 To safely stop monitoring
 
 
+# Demo
+
+Screenshots saved as Realtime_log_analysis_run_demo.png, Realtime_log_analyzer_input_demo.png, Realtime_log_analyzer_output_demo.png
 
 
+# Future Improvements
 
-\# Demo
-
-
-
-Screenshots saved as Realtime\_log\_analysis\_run\_demo.png, Realtime\_log\_analyzer\_input\_demo.png, Realtime\_log\_analyzer\_output\_demo.png
-
-
-
-
-
-\# Future Improvements
+Regex based detection engine
+Detection thresholds (repeat offender alerts)
+JSON/CSV export for SIEM integration
+Integration with real server logs
+Modular detection engine
+Dashboard/UI visualization
+Custom themes an banners
 
 
+# Why This Project Matters
 
-* Regex based detection engine
-* IP tracking \& rate limiting
-* JSON/CSV export
-* Integration with real server logs
-* Color text
+This project demonstrates real time log analysis, cybersecurity threat detection, and Python scripting for security tool development. It leverages Regex based pattern matching to identify an classify recon activity, common web attacks such as XSS and SQL injection.
 
 
-
-
-
-\# Why This Project Matters
-
-
-
-This project demonstrates real time log analysis, cybersecurity threat detection, and Python scripting for security tools.
-
-
-
-\# Author
-
-
+# Author
 
 Cole Hart
+
 
 &#x20;
 
