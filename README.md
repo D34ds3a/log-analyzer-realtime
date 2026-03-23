@@ -78,7 +78,8 @@ To safely stop monitoring
 
 # Demo
 
-Screenshots saved as alerts.png, Realtime_log_analyzer_input_demo.png, Realtime_log_analyzer_output_demo.png
+Screenshots saved as alerts.png, Realtime_log_analyzer_input_demo.png, Realtime_log_analyzer_output_demo.png, Realtime_log_analyzer_run_demo.png
+
 
 
 # Future Improvements
