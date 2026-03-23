@@ -53,7 +53,7 @@ While the program is running
 1. Open sample_logs.txt
 
 2. Add a new line at the bottom, for example in descending severity order LOW, MEDIUM, HIGH :
-
+   '''text
    192.168.1.30 - - [22/Mar/2026:07:00:45 +0000] "GET /robots.txt HTTP/1.1" 200 120
    
    192.168.1.30 - - [22/Mar/2026:06:10:00 +0000] "GET /search?q=<script>alert(1)</script> HTTP/1.1" 200 512
