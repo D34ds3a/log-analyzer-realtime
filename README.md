@@ -12,6 +12,7 @@ This project was written in Python and is a real time log monitoring tool that d
 - SQL injection
 - Web Shell Activity
 - Command Injection
+- Recon Activity
 
 
 # Features
