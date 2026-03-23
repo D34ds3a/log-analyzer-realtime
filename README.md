@@ -7,32 +7,32 @@ This project was written in Python and is a real time log monitoring tool that d
 
 # Detection capabilities
 
-Cross-Site Scripting (XSS)
-Directory Traversal
-SQL injection
-Web Shell Activity
-Command Injection
+- Cross-Site Scripting (XSS)
+- Directory Traversal
+- SQL injection
+- Web Shell Activity
+- Command Injection
 
 
 # Features
 
-Real time log monitoring
-Timestamped alerts
-Apache/Nginx style log support
-Writes alerts to alerts.log
-Alert counter + summary
-Lightweight and easy to run
-Color Terminal output
-Regex based detection
-Severity Classification (HIGH / MEDIUM / LOW)
+- Real time log monitoring
+- Timestamped alerts
+- Apache/Nginx style log support
+- Writes alerts to alerts.log
+- Alert counter + summary
+- Lightweight and easy to run
+- Color Terminal output
+- Regex based detection
+- Severity Classification (HIGH / MEDIUM / LOW)
 
 
 # Technologies Used
-Python
-String based threat detection
-Datetime module
-File streaming (real time monitoring)
-Regular Expressions ('re')
+- Python
+- String based threat detection
+- Datetime module
+- File streaming (real time monitoring)
+- Regular Expressions ('re')
 
 
 # How to Run
@@ -50,19 +50,18 @@ py realtime_log_analyzer.py
 
 While the program is running
 
-Open sample_logs.txt
-Add a new line at the bottom, for example in descending severity order LOW, MEDIUM, HIGH :
-192.168.1.30 - - [22/Mar/2026:07:00:45 +0000] "GET /robots.txt HTTP/1.1" 200 120
-192.168.1.30 - - [22/Mar/2026:06:10:00 +0000] "GET /search?q=<script>alert(1)</script> HTTP/1.1" 200 512
-10.0.0.5 - - [22/Mar/2026:06:10:05 +0000] "GET /login?user=admin' OR '1'='1 HTTP/1.1" 401 210
-
+1. Open sample_logs.txt
+2. Add a new line at the bottom, for example in descending severity order LOW, MEDIUM, HIGH :
+   192.168.1.30 - - [22/Mar/2026:07:00:45 +0000] "GET /robots.txt HTTP/1.1" 200 120
+   192.168.1.30 - - [22/Mar/2026:06:10:00 +0000] "GET /search?q=<script>alert(1)</script> HTTP/1.1" 200 512
+   10.0.0.5 - - [22/Mar/2026:06:10:05 +0000] "GET /login?user=admin' OR '1'='1 HTTP/1.1" 401 210
 3. save file
 
 
 # Observe Alerts
 
 The program will instantly detect malicious patterns and display alerts like:
-[2026-03-22 )7:00:00] [ALERT] SQL Injection detected!
+[2026-03-22 )7:00:00] [HIGH] [ALERT] SQL Injection detected from 10.0.0.5 | Log: 10.0.0.5 - - [22/Mar/2026:06:10:05 +0000] "GET /login?user=admin' OR '1'='1 HTTP/1.1" 401 210
 
 alerts are also saved to:
 alerts.log
@@ -79,18 +78,18 @@ To safely stop monitoring
 
 # Demo
 
-Screenshots saved as Realtime_log_analysis_run_demo.png, Realtime_log_analyzer_input_demo.png, Realtime_log_analyzer_output_demo.png
+Screenshots saved as alerts.png, Realtime_log_analyzer_input_demo.png, Realtime_log_analyzer_output_demo.png
 
 
 # Future Improvements
 
-Regex based detection engine
-Detection thresholds (repeat offender alerts)
-JSON/CSV export for SIEM integration
-Integration with real server logs
-Modular detection engine
-Dashboard/UI visualization
-Custom themes an banners
+- Regex based detection engine
+- Detection thresholds (repeat offender alerts)
+- JSON/CSV export for SIEM integration
+- Integration with real server logs
+- Modular detection engine
+- Dashboard/UI visualization
+- Custom themes an banners
 
 
 # Why This Project Matters
