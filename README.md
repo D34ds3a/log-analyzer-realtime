@@ -53,6 +53,7 @@ While the program is running
 1. Open sample_logs.txt
 
 2. Add a new line at the bottom, for example in descending severity order LOW, MEDIUM, HIGH :
+
    '''text
    192.168.1.30 - - [22/Mar/2026:07:00:45 +0000] "GET /robots.txt HTTP/1.1" 200 120
    
@@ -60,7 +61,7 @@ While the program is running
    
    10.0.0.5 - - [22/Mar/2026:06:10:05 +0000] "GET /login?user=admin' OR '1'='1 HTTP/1.1" 401 210
    
-3. save file
+4. save file
 
 
 # Observe Alerts
